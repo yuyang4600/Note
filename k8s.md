@@ -55,3 +55,20 @@ undo命令可以在升级过程中运行，会直接停止滚动升级，已创�
 `k rollout resume deployment kubia`
 
 通过为deployment添加就绪探针（配合mineadyeconds）可以在升级出错时停止升级，配置ProgresseadlineSeconds指定在多长时间内升级未完成便判定为升级失败
+
+------
+
+`kubectl get pods --watch`
+
+每当创建，修改，删除pod时会通知，即实时显示pod的状态
+
+或者打印整个监听事件的yaml文件
+
+`kubectl get pods -o yaml --watch`
+
+------
+
+更新集群
+
+`gcloud beta container clusters update cxiang-k8s-cluster --enable-pod-security-policy`
+

@@ -48,3 +48,8 @@
 
 两种情形下，在你用`k uncordon <node>`解除节点的不可调度状态之前，不会有新的pod被调度到该节点
 
+------
+
+`k create pdb kubia-pdb --selector=app=kubia --min-avaliable=3`
+
+创建一个PodDisruptionBudget资源，确保具有标签app=kubia的pod总有3个示例在运行
